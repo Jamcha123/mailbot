@@ -5,7 +5,7 @@ import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.8.0/firebase
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup, signOut } from 'https://www.gstatic.com/firebasejs/11.8.0/firebase-auth.js'
 
 const config = {
-    apiKey: "AIzaSyBtX_400T4HgM9-BsdIWG3LzA0AhpIUCbE",
+    apiKey: "",
     authDomain: "mailbot-a84ed.firebaseapp.com",
     projectId: "mailbot-a84ed",
     storageBucket: "mailbot-a84ed.firebasestorage.app",
