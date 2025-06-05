@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/svg+xml" href="./public/vite.svg" />
+
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcNplErAAAAAGEmrF6IoJkeVrSfApVjIoFrnTX1"></script>
+    <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6LcNplErAAAAAGEmrF6IoJkeVrSfApVjIoFrnTX1', {action: 'LOGIN'});
+          });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="./index.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+        a{
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+        button{
+            transition: all 1s;
+        }
+        button:hover{
+            scale: 0.9;
+        }
+        button:active{
+            scale: 1.1;
+        }
+    </style>
+</head>
+<body class="bg-sky-950 overflow-hidden">
+    <nav class="fixed w-[100%] h-[4em] m-auto p-[0] bg-transparent flex flex-row align-middle justify-center text-center ">
+        <ul class="relative w-[75%] h-[100%] m-auto p-[0] flex flex-row align-middle justify-center text-center ">
+
+        </ul>
+        <ul class="relative w-[25%] h-[100%] m-auto p-[0] flex flex-row align-middle justify-center text-center ">
+        </ul>
+    </nav>
+    <nav class="fixed w-[15em] bg-sky-900 h-[100vh] m-auto p-[0] flex flex-col align-middle justify-center text-center ">
+        <ul class="relative w-[100%] h-[75%] z-[100] m-auto p-[0] flex flex-col align-top justify-center text-center ">
+            <div class="relative w-[100%] h-[4em] bg-sky-800 m-0 translate-y-[-320%] mt-[0%] p-[0] flex flex-col align-middle justify-center text-center ">
+                <button class="relative w-[100%] cursor-pointer text-xl text-white underline underline-offset-4 h-[2em] m-auto p-[0] text-center align-middle justify-center flex flex-row ">
+                    API keys
+                </button>
+            </div>
+            <div class="relative w-[100%] h-[4em] bg-sky-800 m-0 mt-[0%] translate-y-[-300%] p-[0] flex flex-col align-middle justify-center text-center ">
+                <button class="relative w-[100%] cursor-pointer text-xl text-white underline underline-offset-4 h-[2em] m-auto p-[0] text-center align-middle justify-center flex flex-row ">
+                    Usage
+                </button>
+            </div>
+            <div class="relative w-[100%] h-[4em] bg-sky-800 m-0 mt-[0%] translate-y-[-280%] p-[0] flex flex-col align-middle justify-center text-center ">
+                <button class="relative w-[100%] cursor-pointer text-xl text-white underline underline-offset-4 h-[2em] m-auto p-[0] text-center align-middle justify-center flex flex-row ">
+                    Billing
+                </button>
+            </div>
+            <div class="relative w-[100%] h-[4em] bg-sky-800 m-0 mt-[0%] translate-y-[-260%] p-[0] flex flex-col align-middle justify-center text-center ">
+                <button class="relative w-[100%] cursor-pointer text-xl text-white underline underline-offset-4 h-[2em] m-auto p-[0] text-center align-middle justify-center flex flex-row ">
+                    Documentation
+                </button>
+            </div>
+        </ul>
+        <ul class="relative w-[100%] h-[4em] z-[100] m-auto p-[0] flex flex-col align-middle justify-center text-center ">
+            <div id="login1" class="relative w-[100%] h-[4em] m-auto p-[0] flex flex-col align-middle justify-center text-center  ">
+                <button id="login2" class="text-2xl cursor-pointer text-white underline underline-offset-4 relative w-[100%] h-[100%] m-auto p-[0] bg-sky-700 ">Login</button>
+            </div>
+            <div id="logout1" class="relative w-[100%] h-[4em] m-auto p-[0] flex flex-col align-middle justify-center text-center  ">
+                <button id="logout2" class="text-2xl cursor-pointer text-white underline underline-offset-4 relative w-[100%] h-[100%] m-auto p-[0] bg-sky-700 ">Logout</button>
+            </div>
+        </ul>
+    </nav>
+    <div id="loginPage" class="fixed w-[20em] h-[15em] m-auto p-[0] bg-sky-700 rounded-xl top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col align-middle justify-center text-center ">
+        <div class="relative w-[100%] h-[5em] m-auto p-[0] flex flex-col align-middle text-center justify-center ">
+            <h1 class="text-2xl text-white ">Login Page</h1>
+        </div>
+        <div class="relative w-[100%] h-[10em] m-auto p-[0] flex flex-row align-middle text-center justify-center ">
+            <div class="relative w-[50%] h-[100%] m-auto p-[0] flex flex-col align-middle justify-center text-center ">'
+                <div class="relative w-[100%] h-[50%] m-auto p-[0] flex flex-row align-middle justify-center text-center ">
+                    <img src="./github.png" id="github" width="50%" height="100%" style="scale: 0.75; cursor: pointer;" alt="">
+                </div>
+            </div>
+            <div class="relative w-[50%] h-[100%] m-auto p-[0] flex flex-col align-middle justify-center text-center ">'
+                <div class="relative w-[100%] h-[50%] m-auto p-[0] flex flex-row align-middle justify-center text-center">
+                    <img id="google" src="https://www.gstatic.com/marketing-cms/assets/images/d5/dc/cfe9ce8b4425b410b49b7f2dd3f3/g.webp=s48-fcrop64=1,00000000ffffffff-rw" width="50%" height="100%" style="scale: 0.75; cursor: pointer;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("loginPage").style.display = "none"
+        document.getElementById("login2").addEventListener("click", (e) => {
+            document.getElementById("loginPage").style.display = "flex"
+        })
+    </script>
+</body>
+</html>
